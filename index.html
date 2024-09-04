@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="icon" href="image-src/pngwing.com (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+    <header>
+        <div class="navbar">
+            <div class="nav-section">
+                <div class="netflix-logo">
+                    <img src="image-src/pngwing.com.png" alt="Netflix-Logo">
+                </div>
+                <div class="signin-language">
+                    <div class="language" aria-label="select language">
+                        <i class="fa-solid fa-language" aria-hidden="true"></i>
+                        <select aria-label="language selection">
+                           <option>English</option>
+                           <option>Hindi</option>
+                        </select>
+                    </div> 
+                    <div class="signin">
+                        <button type="button">Sign In</button>
+                    </div>
+                </div>                
+            </div>            
+        </div>
+        <div class="nav-box">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <p>Starts at ₹149. Cancel anytime.</p>
+            <p id="subtext">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="form-group" role="form" aria-label="Subscription form">
+                <input type="email" id="email" placeholder="Email address" class="email-input" required>
+                <button type="submit" class="get-started-button">Get Started <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="curved-div">
+            <div class="curve"></div>
+        </div>
+    </header>
+    <main>
+        <div class="container1">
+            <section class="trending-section">
+                <h2>Trending Now</h2>
+                <div class="filters">
+                    <select aria-label="Region filter">
+                        <option>India</option>
+                    </select>
+                    <select aria-label="Catagory filter">
+                        <option>Movies</option>
+                    </select>
+                </div>
+                <div class="slider">
+                    <button class="arrow prev" onclick="slideLeft()">&#10094;</button>
+                    <div class="trending-items">
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABS7dyld569XV52EmvaAs6GzTtMdIQU8Zt9-yGDnn0m6JopAB1BKIVRBbH4T94B-dR-NnG6B4xerGgKWih07ZQpH4Z2jhpOLwKb4JkVLW4q2bhRSiXBnPRDvdElbC47Lc-8G2fHz0Xql-L0_hL4elj5BfmRiaQ-KWorhWm-STZquEl2UOaAMxfuwSMfN_F6Dw5KMVEhIEI42e4jMw663a-YJZTrl-o-j4Q5T6eAUOEN-KPY3hqrIuffWhgXcMH_9KWh4HtzOWVAemc9i5ft5jGrUdjSS9HUJwxC5mhCK1T3L5YxPK4yVQXHaH0VUeja9zGdgj8kjeUbF7muN3zz3X4JE.webp?r=2b9" loading="lazy" alt="Movie 1">
+                            <div class="info">
+                                <span class="rank">1</span>   
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABfP1_7nLpY1Gio3tPeNx-UFsRg9nm5Kt9ebmWADCw9pwg7ey4dVXRbWJ0XBKyvzdLeADC1Ke-cw_DZBbTdgDBGZOWhOlYDgfh1FhpuQu5hAnpXH9zG2XMOfWrn0l81K4qpMJEXIZh8x_z6yMoaea61GZhw3ajO-WAg9FxRBWuXi0svaarVcp2ZnvUBNqwfFx9R6Tgd31HDRHxKeG__aOKMGMDEb-4_uqI3grMZFl41FEazHdhoTIhvESC3af7LkMfgxRig-0OZEpQ7_8gmSbSht9m4TmApDSFikMMKALypeQScwT_aQP-fblNIHrFI3xNoBW1modhb_z9sl9uHHuZ_L5DYrCyo5RJ6gKQk32tZBMfYozIAk.webp?r=ead" loading="lazy" alt="Movie 2">
+                            <div class="info">
+                                <span class="rank">2</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQi1XiY993XKxb4gyLyIwMTIpZa9fS38MRT1ujwp31Y1Htl-cdeYTNZQ_SVNUabbYizhgANXtkMnHRaxVRI5pm660ke3HbzpCaZUVWTSlotBui_49rU8e18Y64nFNyEZ7SJO3IWGqjWDHNHeMSiJ_BgwGWi3cr7NFIjGAK7mmjRbPhCMbzI_zxnSD4e-BFhbB1gIS0xkX5hWRoYxOVLiDrs8d4BBmJ3XkhVdxV2fvDp9W7qvZjXJykDe_i3oF4VUg1tTD9ex-SxYfkV7t17vxeF0Kxi-brg_TKYh-iRCZaYuyzwkxRWz9NZlN3E0m9xUILoga3Hl4eb46zSr38jAR3b4QVx0ylMY1BHuC6khk-wrikROvI4.webp?r=787" loading="lazy" alt="Movie 3">
+                            <div class="info">
+                                <span class="rank">3</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABWap9hHVElt-GijDK-GbW7gDiPbSC2ofVEWpO_8ptKt8LS-Ul3l6MT72Fp_7aYhzg4LkmMyNsFOq8OoMdGTKUQJaC4l7_JpESoaTcKe-HMUSE104sjEkUstFOTrs8MNBcWV1dq0T9_aVIdFEGCc0cMlrY90sUaa8r_5aRysf4Ox38ZcaewNZwrZvWX352t8czy2inCQjUyJTcaRBl11RMexmg9G8VmdSzc-OoSWC70Y_d8HnPxRrUHV_YHUzj-11kkvCuVe_J3ItJpctGMN8JemWeLOHRTVh69Qvi6f_bBKxSI0UhC8tmAtgrUG6tiD7yNUnnXcs_tITt8tHdae5IAc.webp?r=8c7" loading="lazy" alt="Movie 4">
+                            <div class="info">
+                                <span class="rank">4</span>  
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYIRsM_M3WYLA_KjPZ3b_gumnUsE0SSCNbPGUlnFVUT3vIs906bdPHC_JCpoKQmwRXMJ7zpZTfP7K95fN840aI-hLbVFeTM6qF4Q5f6M8hymquqFFJTlSjTmls8Dk3CmfHjs5zUWSiSmhK7uoPsEr2FdB4s4VGHXcKc.webp?r=a57" loading="lazy" alt="Movie 5">
+                            <div class="info">
+                                <span class="rank">5</span>  
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABTV34NnKhsqnhc7Hh8g_smtyToc0WyeTXk5_qi5EvE1b7szajVI2zRcKKiySxu8Vs0ZcH8Gs_csQdcDLG_TX0j5_ZErkejjoGEWw5lQ0tP1AQZNoVoLn-vBXd90WtaUJ-ZICTgwCx2kS1cAZRnYq-2M97sJwB43autGzUsiFiuVT__m6gcis2Kp832xZKGJS6rxrOymfJXWlqJBjaw2rp7reKhC4QAFITwGtTiM8OMFXI5qqvgZcgvbWE_RRD4KrAd4PNAcdWRAFKU-CwiL7-lSjhH22.webp?r=d0a" loading="lazy" alt="Movie 6">
+                            <div class="info">
+                                <span class="rank">6</span>  
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABT6d9_Le002OgbX3wA71jTDb_fxV_QWOUAV39VZvpOFs2GOhtDtN3v01eUwaV6ZgFcb4N3qsSttO4OhhWNL0p4hlVRb-pg_0rEuCXlUJDfQuYmAn51tWIoYAeYvJfVv3djlApNSf-bmRslsxzQdVOjQo3MJN20qibgU8ZQiZgE_mLm16n-3_vX2oU0QNQ4q1jSwh00LgA8-CiWu79ydi01sNg8dSdPhwWNQOMyZJnlRjXgr_WgpJmVGQMwqEKHcWxhKH9_IK063cKX_k4pa2BK7ppVJC-Qzr-r3PeCntz5Mn20q5hZNF6zu8HdOkv9RmNG6aAwcN0GAcnrbDlPb4N-Q.webp?r=68c" loading="lazy" alt="Movie 7">
+                            <div class="info">
+                                <span class="rank">7</span> 
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABT7uxgdx1zTxFunI9mNdUMUukVIgJln5GX43iU17T0hGNyKQ3_2asmQj1uL-msAiBRcDy2tusiVllFQjFp5ZkPCvCALJ8jJT5ic.webp?r=183" loading="lazy" alt="Movie 8">
+                            <div class="info">
+                                <span class="rank">8</span> 
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABb3oIcLN4qX-MzZw3EhHY5l4qxUssxXcNgTbPS3_qYa85HJMiJ_7vSflzTZ0FhI8R3bggn_Q9bXHDgzgI-Q96OPDDA2f7RYmAOLUIj4xAIpOMkUmTFl25eejETvoKx6VfHpKs-USBtDQ8rYL1aDAFj1TR-VC_McL82VNeFBWVoV0zvG26iMO6uupuXSTX60.webp?r=71f" loading="lazy" alt="Movie 9">
+                            <div class="info">
+                                <span class="rank">9</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://occ-0-3840-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABc6KXC-uCfDNoTjEu7V044305YLH670k6A3Af0TTDqJlMTFTjtLJacColh-2eAxxbvqMnzjhCNd0PhVsXx9CSsLoTmGtXGVyN6iun6PqJ2hdN_5YTxFQtC2my_iSLsE0X8WF.webp?r=a0a" loading="lazy" alt="Movie 10">
+                            <div class="info">
+                                <span class="rank">10</span>  
+                            </div>
+                        </div>
+                    </div>
+                    <button class="arrow next" onclick="slideRight()">&#10095;</button>
+                </div>
+            </section>
+    
+            <!-- Reasons to Join Section -->
+            <section class="reasons-section">
+                <h2>More reasons to join</h2>
+                <div class="reasons">
+                    <div class="reason">
+                        <h3>Enjoy on your TV</h3>
+                        <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                    </div>
+                    <div class="reason">
+                        <h3>Download your shows to watch offline</h3>
+                        <p>Save your favourites easily and always have something to watch.</p>
+                    </div>
+                    <div class="reason">
+                        <h3>Watch everywhere</h3>
+                        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                    </div>
+                    <div class="reason">
+                        <h3>Create profiles for kids</h3>
+                        <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container2">
+            <div class="box-container">
+                <div class="questions"><p>Frequently Asked Questions</p></div>
+                <div class="box1 box">
+                    <span>What Is Netflix?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="box2 box">
+                    <span>How much does Netflix costs?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="box3 box">
+                    <span>Where can I watch?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="box4 box">
+                    <span>How do I Cancel?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="box5 box">
+                    <span>What can I watch on Netflix?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="box6 box">
+                    <span>Is Netflix good for kids?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="foottext">Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="form-group form" role="form" aria-label="Subscription form">
+            <input type="email" id="email" placeholder="Email address" class="email-input" required>
+            <button type="submit" class="get-started-button">Get Started <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+    
+        <div class="links-container">
+            <div class="foot-panel">
+                <div class="foot-panel1">
+                   <p class="foottext">Questions? Call <span>000-800-919-1694</span></p>
+                </div>
+                <div class="foot-panel2">
+                    <ul>
+                        <a>FAQ</a>
+                        <a>Investor Relations</a>
+                        <a>Privacy</a>
+                        <a>Speed Test</a>
+                    </ul>
+                    <ul>
+                        <a>Help Centre</a>
+                        <a>Jobs</a>
+                        <a>Cookie Preferences</a>
+                        <a>Legal Notices</a>
+                    </ul>
+                    <ul>
+                        <a>Account</a>
+                        <a>Ways to Watch</a>
+                        <a>Corporate Information</a>
+                        <a>Only on Netflix</a>
+                    </ul>
+                    <ul>
+                        <a>Media Centre</a>
+                        <a>Terms of Use</a>
+                        <a>Contact Us</a>
+                        
+                    </ul>
+                </div>
+                <div class="foot-panel3">
+                    <div class="language selected">
+                         <i class="fa-solid fa-language"></i>
+                        <select>
+                           <option>English</option>
+                           <option>Hindi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="foot-panel4">
+                    <span>Netflix India</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function slideLeft() {
+            document.querySelector('.trending-items').scrollBy({ left: -150, behavior: 'smooth' });
+        }
+
+        function slideRight() {
+            document.querySelector('.trending-items').scrollBy({ left: 150, behavior: 'smooth' });
+        }
+    </script>
+    </div>
+</body>
+</html>

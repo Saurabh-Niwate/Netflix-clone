@@ -1,0 +1,612 @@
+:root {
+    --primary-color: #e50914;
+    --secondary-color: #acabab;
+    --background-color: black;
+    --text-color: white;
+    --font-size-base: 1rem;
+}
+
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+
+}
+.content{
+    max-width: 120rem;
+    width: 100%;
+}
+header{
+    height: 38rem;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    url('image-src/hero-image.jpg') center/cover no-repeat;
+}
+.navbar{
+    height: 4rem;
+    padding:0rem 8rem;
+    display: flex;
+    align-items:last baseline;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1))
+}
+.nav-section{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.netflix-logo{
+    height:4.4rem;
+    width: 11.5rem;
+   
+}
+.netflix-logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.signin-language{
+    height: 4rem;
+    width: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.language{
+    height: 2rem;
+    width: 7rem;
+    background-color:var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding:0 6px;
+    border-radius: 0.3rem;
+    border: 1px solid var(--secondary-color);
+}
+.language select{
+    height: 100%;
+    width: 5rem;
+    border: 0;
+    outline: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-left: 8px;
+    
+}
+.language:hover,
+.language:focus{
+    outline: 2px solid var(--text-color);
+}
+.signin{
+    height: 2rem;
+    width:5rem;
+}
+
+.signin button{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    height: 100%;
+    width: 100%;
+    border-radius: 0.3rem;
+    outline: 0;
+    border: none;
+    padding: 0 8px;
+    font-weight: 600;
+}
+.nav-box {
+    max-width: 600px;
+    margin: 0px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav-box h1 {
+    font-size: 3.4rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color:var(--text-color);
+}
+
+.nav-box p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 25px 0;
+    color: var(--text-color);
+}
+
+
+#subtext {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Email input field styling */
+.email-input {
+    padding: 15px;
+    width: 60%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 1.5rem;
+}
+
+/* Get Started button styling */
+.get-started-button {
+    width: 12rem;
+    padding: 1rem 0px;
+    background-color: var(--primary-color); 
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: bold;
+}  
+.curved-div{
+    height: 2.4rem;
+    width: 100%;
+    display: flex;
+}
+.curve{
+    height: 90%;
+    width: 100%;
+    border-top-left-radius:  50% 100% ;
+    border-top-right-radius:50% 100% ;
+    border-top:5px solid  #c11b36;
+    background: radial-gradient(circle at center,  #0a0f3f, #0a0f3f );
+}
+.container1 {
+    height: 55rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #0a0f3f 0.5%, #000 15%);
+    margin-bottom: 4rem;
+    
+}
+.trending-section h2,
+.reasons-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+.trending-section{
+    width: 80%;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filters select{
+    height: 2rem;
+    width: 6rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    outline: 0;
+    border: 1.5px solid #424242;
+    border-radius: 4px;
+    padding:0px 8px;
+    font-size: 1rem;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 18rem;
+}
+
+.trending-items {
+    display: flex;
+    gap: 2rem;
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+    width: calc(100% - 80px); /* Subtract width of arrows */
+    height: 18rem;
+    align-items: center;
+    padding: 0px 1rem;
+}
+
+.item {
+    position: relative; /* Keeps it as a reference point for absolute positioning */
+    min-width: 185px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds a transition for the transform and box-shadow properties */
+    height: 17rem;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Scales the item up by 5% on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for a pop-up effect */
+}
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.info {
+    position: absolute;
+    bottom:10px;
+    left: 5px;
+    
+}
+
+.rank {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--background-color);
+    -webkit-text-stroke: 2px var(--text-color); /* Adds a 1px white border around the text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.arrow {
+    background-color:#2d2d2d;
+    border: none;
+    color: lightgrey;
+    font-size: 30px;
+    cursor: pointer;
+    width: 2rem;
+    height: 8rem;
+    margin: 0px 10px;
+    border-radius: 10px;
+}
+.arrow:hover{
+    background-color: #393939;
+}
+
+.reasons-section {
+    margin-top: 40px;
+    width: 80%;
+    height: 22rem;
+}
+
+.reasons {
+    display: flex;
+    gap: 20px;
+    height: 20rem;
+}
+
+.reason {
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.reason h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    text-align: start;
+}
+
+.reason p {
+    font-size: 1rem;
+    color: #acabab;
+    text-align: start;
+    font-weight: 500;
+}
+
+.container2{
+    height: 38rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.box-container{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.questions p{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin: 10px 0px;
+}
+.box{
+    height:4.8rem;
+    padding: 0px 1rem;
+    background-color: #2d2d2d;
+    color: var(--text-color);
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+.box:hover{
+    background-color: #424242;
+    cursor: pointer;
+}
+.box i{
+    font-size: 2rem;
+}
+.box span{
+    font-size: 1.5rem;
+}
+footer{
+    height: 35rem;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form{
+    width: 60rem;
+    margin: 0;
+}
+.links-container{
+    height: 26.5rem;
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.foot-panel{
+    height: 80%;
+    width: 80%;
+    flex-direction: column;
+}
+.foot-panel1 p{
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+.foot-panel1 span{
+    color: var(--secondary-color);
+    font-size:1rem ;
+    text-decoration: underline;
+}
+.foot-panel2{
+    display: flex;
+    justify-content: space-between;
+    width: 53rem;
+
+}
+.foot-panel2 a{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+#foottext{
+    color: var(--text-color);
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.foot-panel3{
+    margin-top: 3.5rem;
+}
+.foot-panel4{
+    margin-top: 2rem;
+}
+.foot-panel4 span{
+    font-size: 1rem;
+    color: var(--secondary-color);
+    
+}
+
+@media(max-width:960px) and ( min-width:480px){
+    .navbar{
+        padding: 0rem 1rem;
+    }
+    .netflix-logo{
+        width: 8rem;
+        height: 3rem;
+    }
+    .nav-box h1{
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    .nav-box p{
+        font-size: 1rem;
+    }
+    .email-input{
+        width: 45%;
+    }
+    .container1{
+        height: 86rem;
+        margin: 0;
+    }
+    .slider{
+        height: 16rem;
+    }
+    .trending-items{
+        height: 15rem;
+    }
+    .item{
+        height: 14rem;
+        min-width: 150px
+    }
+    .rank{
+        font-size: 5rem;
+    }
+    .reasons-section{
+        height: 58rem;
+    }
+    .reasons{
+        flex-wrap: wrap;
+        height: 50rem;
+    }
+    .reason{
+        min-width: 90%
+    }
+    footer{
+        height: 45rem;
+    }
+    .foot-panel2{
+        width: 45rem;
+        height: 20rem;
+        flex-wrap: wrap;
+    }
+    .foot-panel2 ul{
+        width: 50%;
+    }
+    .form{
+        width: 38rem;
+    }
+}
+
+@media(max-width:480px){
+    .navbar{
+        padding: 0rem 1rem;
+    }
+    .nav-section{
+        height: 90%;
+    }
+    .netflix-logo{
+        width: 7rem;
+        height: 2.5rem;
+    }
+    .signin-language{
+        width: 10rem;
+    }
+    .language{
+        height: 1.8rem;
+        width: 2.5rem;
+    }
+    .language select{
+        width: 1rem;
+    }
+    .nav-box h1{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .nav-box p{
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+    .form-group{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+    }
+    .email-input{
+        width: 80%;
+        padding: 12px;
+    }
+    .get-started-button{
+        padding: 0.8rem 0;
+        font-size: 1.1rem;
+        width: 10rem;
+    }
+    .trending-section h2{
+        font-size: 18px;
+    }
+    .filters{
+        height: 6rem;
+        flex-wrap: wrap;
+    }
+    .filters select{
+        height: 2.5rem;
+        width:100%;
+    }
+    .slider{
+        height: 13rem;
+    }
+    .trending-items{
+        height: 12rem;
+    }
+    .item{
+        height: 11rem;
+        min-width: 7.5rem;
+    }
+    .info{
+        bottom: 5px;
+    }
+    .rank{
+        font-size: 4rem;
+    }
+    .container1{
+        height: 82rem;
+    }
+    .reasons-section{
+        height: 57rem;
+    }
+    .reasons-section h2{
+        font-size: 1.125rem;
+    }
+    .reasons{
+        height: 54rem;
+        flex-wrap: wrap;
+        gap:0.8rem
+    }
+    .reason{
+        min-width: 250px;
+        padding: 24px 12px;
+    }
+    .reason h3{
+        font-size: 1.2rem;
+    }
+    .questions p{
+        font-size: 1.125rem;
+    }
+    .box span{
+        font-size: 1.125rem;
+    }
+    .box i{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .container2{
+        margin-bottom: 0;
+        height: 40rem;
+    }
+    footer{
+        height: 60rem;
+    }
+    #foottext{
+        padding: 0px 1rem;
+        text-align: center;
+    }
+    
+    .foot-panel{
+        height: 100%;
+    }
+    .foot-panel2{
+        display: block;
+        width: 17rem;
+    }
+    .selected{
+        width: 7rem;
+    }
+    .selected select{
+        width: 5rem;
+    }
+}
